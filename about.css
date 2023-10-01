@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: linear-gradient(45deg, #0004ff, #8385ff, #c0b9ff, #8385ff, #0004ff);
+  background-size: 400% 400%;
+  animation: neon 5s linear infinite, fade-in 0.5s ease-in-out forwards;
+}
+
+.active {
+  background-color: #fff;
+  color: #fff;
+  border-radius: 10px;
+}
+
+header {
+  padding: 1rem 0;
+  text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+  font-weight: bold;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  padding: 10px;
+}
+
+header ul li a:hover {
+  color: #fff;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  padding: 2rem;
+}
+
+.about {
+  padding: 2rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  color: #fff;
+}
+
+.about > img {
+  align-self: flex-start;
+  border: 10px solid #fff;
+  border-radius: 180px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.about ul li a:hover {
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+  text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+  transition: background-color 0.3s ease;
+}
+
+.about p {
+  max-height: 100px;
+  max-width: 95%;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.about p b .link-cv {
+  text-decoration: none;
+  color: #fff;
+}
+
+.about p b .link-cv:hover {
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+  text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+  padding: 1rem 0;
+}
+
+footer p a img {
+  border-radius: 20px;
+  padding: 0 10px;
+  width: 100px;
+  height: 50px;
+}
+
+footer p a img:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+}
+
+@keyframes neon {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
