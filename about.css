@@ -58,8 +58,8 @@ main {
   padding: 2rem;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
   color: #fff;
+  text-align: center;
 }
 
 .about > img {
@@ -90,6 +90,7 @@ main {
 }
 
 .about p {
+  padding: 10px 0;
   max-height: 100px;
   max-width: 95%;
   overflow: hidden;
