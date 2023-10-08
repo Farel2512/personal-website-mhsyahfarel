@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" />
+    <link rel="icon" href="foto/menone.png" />
     <link rel="stylesheet" href="portfolio.css" />
-    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <title>Muhammad Haikal Syahfarel - Portfolio</title>
   </head>
   <body>
     <header>
       <nav>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -22,20 +27,101 @@
     <main>
       <section class="portfolio">
         <h1>My Portfolio</h1>
-        <div class="portfolio-item">
-          <img src="project1.jpg" alt="Project 1" />
-          <h2>Project 1</h2>
-          <p>Description of project 1.</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="project2.jpg" alt="Project 2" />
-          <h2>Project 2</h2>
-          <p>Description of project 2.</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="project3.jpg" alt="Project 3" />
-          <h2>Project 3</h2>
-          <p>Description of project 3.</p>
+        <div class="portfolio-container">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100 card-custom">
+                <img src="https://cdn-icons-png.flaticon.com/128/10476/10476452.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">BMI Calculator</h5>
+                </div>
+
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bmi-calc-info">Selengkapnya</button>
+                <div class="modal fade" id="bmi-calc-info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">BMI Calculator</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-image"><img src="https://cdn-icons-png.flaticon.com/128/10476/10476452.png" class="card-img-top" alt="..." /></div>
+                      <div class="modal-body">Ini adalah website yang dibuat untuk menghitung indeks massa tubuh. Hanya masukkan berapa tinggi dan berat badan Anda pada website ini.</div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-success"><a href="https://bmi-calculator-mhsyahfarel.netlify.app/">Kunjungi Website</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 card-custom">
+                <img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">My Personal Website</h5>
+                </div>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#per-web">Selengkapnya</button>
+                <div class="modal fade" id="per-web" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">My Personal Website</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-image"><img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="card-img-top" alt="..." /></div>
+                      <div class="modal-body">Ini adalah sebuah website yang dibuat untuk menampilkan informasi pribadi. Menampilkan nama panjang, TTL, riwayat pekerjaan, skill yang dikuasai dan hal yang lainnya</div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-success"><a href=""></a>Kunjungi Website</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 card-custom">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-figma-1-682085.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Figma FS-26</h5>
+                </div>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#figma-team">Selengkapnya</button>
+                <div class="modal fade" id="figma-team" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Figma FS-26</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-image"><img src="https://cdn.iconscout.com/icon/free/png-256/free-figma-1-682085.png" class="card-img-top" alt="..." /></div>
+                      <div class="modal-body">Ini adalah website yang digunakan untuk membuat tampilan UI Design dari tim 26 Fullstack Web Development dari Skilvul.</div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-success"><a href="https://www.figma.com/file/0Icq7IeEAFgfAYUa3WN4lc/UI-Tugas-akhir?type=design&node-id=0-1&mode=design&t=G2uicsY8jiuv1U7k-0">Kunjungi Website</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 card-custom">
+                <div class="card-body">
+                  <h5 class="card-title">Coming Soon</h5>
+                  <p class="card-text">none. <a href="" data-bs-toggle="modal" data-bs-target="#figma-team"></a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 card-custom">
+                <div class="card-body">
+                  <h5 class="card-title">Coming Soon</h5>
+                  <p class="card-text">none. <a href="" data-bs-toggle="modal" data-bs-target="#figma-team"></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -45,5 +131,7 @@
         <a href="https://www.skilvul.com"><img src="https://skilvul.com/static/skilvul.svg" /></a>
       </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>

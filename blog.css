@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
   font-weight: bold;
 }
@@ -54,35 +54,40 @@ main {
   padding: 2rem;
 }
 
-.blog {
+.blog > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  color: #fff;
   text-align: center;
 }
 
-.blog h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.blog-container p {
+  max-height: 100px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: justify;
 }
 
-.blog-post {
-  background-color: #f2f2f2;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+.blog-container btn {
+  background-color: #fff;
 }
 
-.blog-post h2 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-.blog-post p {
-  font-size: 1rem;
-}
-
-.blog-post a {
+.blog-container a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: black;
+}
+
+.blog-container a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+.card-custom {
+  background-color: #fff;
+  box-shadow: 5px 5px;
+  border: 1px solid black;
 }
 
 footer {
@@ -104,6 +109,65 @@ footer p a img {
 footer p a img:hover {
   background-color: #ffffff;
   box-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Tampilan menu pada perangkat dengan lebar lebih dari 768px */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    padding-left: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 10px 0;
+    padding: 30px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+    background: linear-gradient(45deg, #0004ff, #8385ff, #c0b9ff, #8385ff, #0004ff);
+    background-size: 400% 400%;
+    animation: neon 5s linear infinite, fade-in 0.5s ease-in-out forwards;
+    border: 3px solid black;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 }
 
 @keyframes neon {

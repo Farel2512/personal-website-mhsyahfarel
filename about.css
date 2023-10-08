@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
   font-weight: bold;
 }
@@ -59,26 +59,24 @@ main {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  align-items: center;
   color: #fff;
 }
 
 .about > img {
-  align-self: flex-start;
-  border: 10px solid #fff;
-  border-radius: 180px;
   width: 300px;
-  height: 300px;
-  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  display: flex;
 }
 
 .about h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-.about ul li a {
+.about ul li a,
+.about p b .link-cv {
   text-decoration: none;
   color: #fff;
 }
@@ -98,17 +96,103 @@ main {
   text-align: justify;
 }
 
-.about p b .link-cv {
-  text-decoration: none;
-  color: #fff;
-}
-
 .about p b .link-cv:hover {
   font-weight: bold;
   color: #fff;
   border-radius: 5px;
   text-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
   transition: background-color 0.3s ease;
+}
+
+.skills-title {
+  text-align: center;
+}
+
+.skills-title > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill {
+  text-align: center;
+  margin: 10px;
+}
+
+.percentage {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.html-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 100px, 100px, 25px);
+  background-color: #007bff;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.css-circle,
+.me-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 100px, 100px, 30px);
+  background-color: #007bff;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.js-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 100px, 100px, 55px);
+  background-color: #007bff;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.mw-circle,
+.canva-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 100px, 100px, 20px);
+  background-color: #007bff;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  font-size: 24px;
+  color: #333;
+}
+
+.skill-name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+  grid-template-columns: 1fr;
 }
 
 footer {
@@ -130,6 +214,84 @@ footer p a img {
 footer p a img:hover {
   background-color: #ffffff;
   box-shadow: 0 0 10px #0004ff, 0 0 20px #8385ff, 0 0 30px #c0b9ff;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Tampilan menu pada perangkat dengan lebar lebih dari 768px */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    padding-left: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 10px 0;
+    padding: 30px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+    background: linear-gradient(45deg, #0004ff, #8385ff, #c0b9ff, #8385ff, #0004ff);
+    background-size: 400% 400%;
+    animation: neon 5s linear infinite, fade-in 0.5s ease-in-out forwards;
+    border: 3px solid black;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .about {
+    grid-template-columns: 1fr; /* 1 kolom pada layar mobile */
+    /* text-align: center; */
+  }
+
+  .about > img {
+    width: 200px; /* Ukuran gambar yang lebih kecil */
+    height: 266px;
+    margin-bottom: 1rem;
+  }
+
+  .about h1 {
+    font-size: 2rem; /* Ukuran font yang lebih kecil */
+  }
+
+  .about ul li {
+    margin: 10px 0;
+  }
 }
 
 @keyframes neon {
